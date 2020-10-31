@@ -1,0 +1,9 @@
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\obj\Debug\netstandard2.0\SidePhotoViewer.Core.AssemblyInfoInputs.cache
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\obj\Debug\netstandard2.0\SidePhotoViewer.Core.AssemblyInfo.cs
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\bin\Debug\netstandard2.0\SidePhotoViewer.Core.deps.json
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\bin\Debug\netstandard2.0\SidePhotoViewer.Core.dll
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\bin\Debug\netstandard2.0\SidePhotoViewer.Core.pdb
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\obj\Debug\netstandard2.0\SidePhotoViewer.Core.csprojAssemblyReference.cache
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\obj\Debug\netstandard2.0\SidePhotoViewer.Core.csproj.CoreCompileInputs.cache
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\obj\Debug\netstandard2.0\SidePhotoViewer.Core.dll
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer.Core\obj\Debug\netstandard2.0\SidePhotoViewer.Core.pdb
