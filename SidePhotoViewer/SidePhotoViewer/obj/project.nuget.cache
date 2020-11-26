@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UZOUrGPbr1DeRP+E0z6tsuaYwdJ4ZaFh6Ptc0v+emDlSBY4gzr5ZS7rML12fJZlDBbjxX+PWFPnN3PUhUH5P6A==",
+  "dgSpecHash": "Kh/QStvgFQWMT5eQBICQJVOolmMT7YtHPD0j1AKq70ePGlZ6keNJnTFPz9W6FLnxC0oz8J3Qu2BWGDE3pRoXxg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\sidephotoviewer\\SidePhotoViewer\\SidePhotoViewer\\SidePhotoViewer.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,30 @@
     "C:\\Users\\mnoog\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
     "C:\\Users\\mnoog\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\mnoog\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\mnoog\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+    "C:\\Users\\mnoog\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\mnoog\\.nuget\\packages\\windowsapicodepack-core\\1.1.1\\windowsapicodepack-core.1.1.1.nupkg.sha512",
+    "C:\\Users\\mnoog\\.nuget\\packages\\windowsapicodepack-shell\\1.1.1\\windowsapicodepack-shell.1.1.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "パッケージ 'WindowsAPICodePack-Core 1.1.1' はプロジェクトのターゲット フレームワーク '.NETCoreApp,Version=v3.1' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' を使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。",
+      "libraryId": "WindowsAPICodePack-Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "パッケージ 'WindowsAPICodePack-Shell 1.1.1' はプロジェクトのターゲット フレームワーク '.NETCoreApp,Version=v3.1' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' を使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。",
+      "libraryId": "WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

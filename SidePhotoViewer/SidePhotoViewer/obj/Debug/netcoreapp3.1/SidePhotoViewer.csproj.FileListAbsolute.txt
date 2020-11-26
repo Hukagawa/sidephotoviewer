@@ -65,3 +65,5 @@ D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer\obj\Debug\netcoreapp
 D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer\obj\Debug\netcoreapp3.1\SidePhotoViewer.dll
 D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer\obj\Debug\netcoreapp3.1\SidePhotoViewer.pdb
 D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer\obj\Debug\netcoreapp3.1\SidePhotoViewer.genruntimeconfig.cache
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.dll
+D:\Projects\sidephotoviewer\SidePhotoViewer\SidePhotoViewer\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.Shell.dll

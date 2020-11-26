@@ -472,11 +472,33 @@
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
       },
+      "WindowsAPICodePack-Core/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {}
+        }
+      },
+      "WindowsAPICodePack-Shell/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "WindowsAPICodePack-Core": "1.1.1"
+        },
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        }
+      },
       "SidePhotoViewer.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "WindowsAPICodePack-Shell": "1.1.1"
         },
         "compile": {
           "bin/placeholder/SidePhotoViewer.Core.dll": {}
@@ -1208,6 +1230,32 @@
         "version.txt"
       ]
     },
+    "WindowsAPICodePack-Core/1.1.1": {
+      "sha512": "GoURoQuE7ea7B7q24YRTBfZbsNO7ZtwSyBHbM8zO0ynwfjAGC0bbAmVrDvZ6HbWtqqOt6QTzdmYnj2WJglb5JQ==",
+      "type": "package",
+      "path": "windowsapicodepack-core/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.dll",
+        "lib/Microsoft.WindowsAPICodePack.xml",
+        "windowsapicodepack-core.1.1.1.nupkg.sha512",
+        "windowsapicodepack-core.nuspec"
+      ]
+    },
+    "WindowsAPICodePack-Shell/1.1.1": {
+      "sha512": "CPFamhL3jPo8O6+ErGsLS4LK3DWP5ncxqhbzpPnYkIW9rjatunUij35iTjprbr9mlYR/5Pbguw21MwSmTOKR4g==",
+      "type": "package",
+      "path": "windowsapicodepack-shell/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/Microsoft.WindowsAPICodePack.Shell.xml",
+        "windowsapicodepack-shell.1.1.1.nupkg.sha512",
+        "windowsapicodepack-shell.nuspec"
+      ]
+    },
     "SidePhotoViewer.Core/1.0.0": {
       "type": "project",
       "path": "../SidePhotoViewer.Core/SidePhotoViewer.Core.csproj",
@@ -1218,7 +1266,8 @@
     ".NETCoreApp,Version=v3.1": [
       "MahApps.Metro >= 2.2.0",
       "Microsoft.Extensions.Hosting >= 3.1.8",
-      "SidePhotoViewer.Core >= 1.0.0"
+      "SidePhotoViewer.Core >= 1.0.0",
+      "WindowsAPICodePack-Shell >= 1.1.1"
     ]
   },
   "packageFolders": {
@@ -1250,6 +1299,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "D:\\Projects\\sidephotoviewer\\SidePhotoViewer\\SidePhotoViewer.Core\\SidePhotoViewer.Core.csproj": {
               "projectPath": "D:\\Projects\\sidephotoviewer\\SidePhotoViewer\\SidePhotoViewer.Core\\SidePhotoViewer.Core.csproj"
@@ -1265,6 +1315,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MahApps.Metro": {
             "target": "Package",
@@ -1273,6 +1324,10 @@
           "Microsoft.Extensions.Hosting": {
             "target": "Package",
             "version": "[3.1.8, )"
+          },
+          "WindowsAPICodePack-Shell": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           }
         },
         "imports": [
@@ -1293,8 +1348,30 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "パッケージ 'WindowsAPICodePack-Core 1.1.1' はプロジェクトのターゲット フレームワーク '.NETCoreApp,Version=v3.1' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' を使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。",
+      "libraryId": "WindowsAPICodePack-Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "パッケージ 'WindowsAPICodePack-Shell 1.1.1' はプロジェクトのターゲット フレームワーク '.NETCoreApp,Version=v3.1' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' を使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。",
+      "libraryId": "WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

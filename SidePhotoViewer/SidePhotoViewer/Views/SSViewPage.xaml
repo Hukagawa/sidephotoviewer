@@ -17,14 +17,43 @@
             Style="{StaticResource PageTitleStyle}"
             Margin="{StaticResource MediumLeftMargin}"
             Text="{x:Static properties:Resources.SSViewPageTitle}" />
+
         <Grid
-            Grid.Row="1"
+            Grid.Row="2"
             Margin="{StaticResource MediumLeftRightMargin}"
-            Background="{DynamicResource MahApps.Brushes.Gray10}">
-            <!--
-            The Mahapps Gray10 color represents where you should place your content.
-            Place your content here.
-            -->
+            Background="{DynamicResource MahApps.Brushes.Gray10}" HorizontalAlignment="Stretch">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 左ペイン -->
+            <Grid  x:Name="grid_picture_view"  Grid.Column="0">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="左側" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Image x:Name="image_main" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="100,46,0,0" Text="ファイル一覧テスト用" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            </Grid>
+
+            <!-- スプリッタ -->
+            <GridSplitter x:Name="gridSplitter" Grid.Column="1" Width="3" HorizontalAlignment="Left"/>
+
+            <!-- 右ペイン -->
+            <Grid x:Name="grid_picture_table" Grid.Column="2" MinWidth="50">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="30" MaxHeight="30" MinHeight="30"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel x:Name="stackPanelPicture"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,0,0,0" Text="右側" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="0"/>
+                <Button x:Name="btn_openfolder" Content="OpenFolder" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Height="30" Click="btn_openfolder_Click"/>
+                
+                
+
+            </Grid><!-- grid_picture_table -->
+
         </Grid>
     </Grid>
 </Page>
