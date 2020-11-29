@@ -69,22 +69,48 @@ namespace SidePhotoViewer.Views
             var extension_list = new List<string>{".jpg", ".png", ".bmp", ".tif"};
             
             // テスト用
-            string file_names_combined = "";
-            foreach(string str in file_names_all)
+            //string file_names_combined = "";
+            //foreach(string str in file_names_all)
+            //{
+            //    // 拡張子比較
+            //    string extension = System.IO.Path.GetExtension(str);
+            //    if (extension_list.Contains(extension))
+            //    {
+            //        file_names_combined += str + "\n";
+            //    }
+            //}
+            //textBlock1.Text = file_names_combined;
+
+
+            // 取得：画像データ
+            var picture_list = new List<BitmapImage>();
+            foreach (string str in file_names_all)
             {
                 // 拡張子比較
                 string extension = System.IO.Path.GetExtension(str);
                 if (extension_list.Contains(extension))
                 {
-                    file_names_combined += str + "\n";
+                    var image = new BitmapImage(new Uri(str));
+                    picture_list.Add(image);
                 }
             }
-            textBlock1.Text = file_names_combined;
 
-            // 表示：画像
-            //image_main.Source = new BitmapImage(new Uri(file_names_all[0]));
+            // 取得：左ペイン幅
+            var grid_left_width = gridLeft.Width;
 
+            // 取得：右ペイン幅
+            var grid_right_widht = gridRight.Width;
 
+            // 表示：左ペイン画像
+            //var image_main_source = new BitmapImage(new Uri(file_names_all[0]));
+
+            imageMain.Source = picture_list;
+
+            // 表示：右ペイン画像（動的にImageを作成する）
+            var test_image = new Image();
+            test_image.Source = image_main_source;
+
+            stackPanelPicture.Children.Add(test_image);
         }
     }
 }

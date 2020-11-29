@@ -29,9 +29,9 @@
             </Grid.ColumnDefinitions>
 
             <!-- 左ペイン -->
-            <Grid  x:Name="grid_picture_view"  Grid.Column="0">
+            <Grid  x:Name="gridLeft"  Grid.Column="0">
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="左側" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <Image x:Name="image_main" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
+                <Image x:Name="imageMain" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="100,46,0,0" Text="ファイル一覧テスト用" TextWrapping="Wrap" VerticalAlignment="Top"/>
             </Grid>
 
@@ -39,7 +39,7 @@
             <GridSplitter x:Name="gridSplitter" Grid.Column="1" Width="3" HorizontalAlignment="Left"/>
 
             <!-- 右ペイン -->
-            <Grid x:Name="grid_picture_table" Grid.Column="2" MinWidth="50">
+            <Grid x:Name="gridRight" Grid.Column="2" MinWidth="50">
 
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -48,9 +48,7 @@
 
                 <StackPanel x:Name="stackPanelPicture"/>
                 <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,0,0,0" Text="右側" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="0"/>
-                <Button x:Name="btn_openfolder" Content="OpenFolder" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Height="30" Click="btn_openfolder_Click"/>
-                
-                
+                <Button x:Name="btnOpenfolder" Content="OpenFolder" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Height="30" Click="btn_openfolder_Click"/>
 
             </Grid><!-- grid_picture_table -->
 
