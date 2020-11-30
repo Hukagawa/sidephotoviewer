@@ -67,7 +67,7 @@ namespace SidePhotoViewer.Views
             string[] file_names_all = Directory.GetFiles(folder_path);
             var file_names_picture = new List<string>();
             var extension_list = new List<string>{".jpg", ".png", ".bmp", ".tif"};
-            
+
             // テスト用
             //string file_names_combined = "";
             //foreach(string str in file_names_all)
@@ -81,8 +81,11 @@ namespace SidePhotoViewer.Views
             //}
             //textBlock1.Text = file_names_combined;
 
+            // 取得：StackPanelの幅
+            var stack_panel_width = stackPanelPicture.ActualHeight;
 
-            // 取得：画像データ
+
+            // 取得：すべての画像データのリスト
             var picture_list = new List<BitmapImage>();
             foreach (string str in file_names_all)
             {
@@ -102,15 +105,19 @@ namespace SidePhotoViewer.Views
             var grid_right_widht = gridRight.Width;
 
             // 表示：左ペイン画像
-            //var image_main_source = new BitmapImage(new Uri(file_names_all[0]));
-
-            imageMain.Source = picture_list;
+            imageMain.Source = picture_list[0];
 
             // 表示：右ペイン画像（動的にImageを作成する）
-            var test_image = new Image();
-            test_image.Source = image_main_source;
+            foreach(BitmapImage picture in picture_list)
+            {
+                // Imageコントロール：サムネイルの表示用
+                var image = new Image();
+                picture.DecodePixelWidth = (int)stack_panel_width;
+                image.Source = picture;
+                stackPanelPicture.Children.Add(image);
+            }
 
-            stackPanelPicture.Children.Add(test_image);
         }
+
     }
 }

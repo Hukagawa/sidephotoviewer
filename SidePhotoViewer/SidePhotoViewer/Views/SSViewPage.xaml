@@ -36,17 +36,19 @@
             </Grid>
 
             <!-- スプリッタ -->
-            <GridSplitter x:Name="gridSplitter" Grid.Column="1" Width="3" HorizontalAlignment="Left"/>
+            <GridSplitter x:Name="gridSplitter" Grid.Column="1" Width="5" HorizontalAlignment="Left"/>
 
             <!-- 右ペイン -->
-            <Grid x:Name="gridRight" Grid.Column="2" MinWidth="50">
+            <Grid x:Name="gridRight" Grid.Column="2" MinWidth="50" Margin="5,0,0,0">
 
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition Height="30" MaxHeight="30" MinHeight="30"/>
                 </Grid.RowDefinitions>
 
-                <StackPanel x:Name="stackPanelPicture"/>
+                <ScrollViewer>
+                    <StackPanel x:Name="stackPanelPicture"/>
+                </ScrollViewer>
                 <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,0,0,0" Text="右側" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="0"/>
                 <Button x:Name="btnOpenfolder" Content="OpenFolder" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Height="30" Click="btn_openfolder_Click"/>
 
