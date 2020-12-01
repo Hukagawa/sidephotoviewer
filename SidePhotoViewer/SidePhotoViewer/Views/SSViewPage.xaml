@@ -31,7 +31,7 @@
             <!-- 左ペイン -->
             <Grid  x:Name="gridLeft"  Grid.Column="0">
                 <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,0,0,0" Text="左側" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <Image x:Name="imageMain" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch"/>
+                <Image x:Name="imageMain" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" Margin="1,1,1,1"/>
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="100,46,0,0" Text="ファイル一覧テスト用" TextWrapping="Wrap" VerticalAlignment="Top"/>
             </Grid>
 

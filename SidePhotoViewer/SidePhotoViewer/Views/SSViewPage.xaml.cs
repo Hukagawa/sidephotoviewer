@@ -1,10 +1,10 @@
-﻿using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Dialogs;
+﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
@@ -12,6 +12,8 @@ namespace SidePhotoViewer.Views
 {
     public partial class SSViewPage : Page, INotifyPropertyChanged
     {
+        public HorizontalAlignment Strech { get; private set; }
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -82,7 +84,7 @@ namespace SidePhotoViewer.Views
             //textBlock1.Text = file_names_combined;
 
             // 取得：StackPanelの幅
-            var stack_panel_width = stackPanelPicture.ActualHeight;
+            var stack_panel_width = stackPanelPicture.ActualWidth;
 
 
             // 取得：すべての画像データのリスト
@@ -114,8 +116,13 @@ namespace SidePhotoViewer.Views
                 var image = new Image();
                 picture.DecodePixelWidth = (int)stack_panel_width;
                 image.Source = picture;
+                image.Width = stack_panel_width;
+
                 stackPanelPicture.Children.Add(image);
+                picture.Dispose();
             }
+
+            picture_list.Dispose();
 
         }
 
