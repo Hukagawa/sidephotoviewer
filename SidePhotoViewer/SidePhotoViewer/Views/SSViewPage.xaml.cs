@@ -67,36 +67,21 @@ namespace SidePhotoViewer.Views
             }
             // 取得：フォルダ内ファイル一覧
             string[] file_names_all = Directory.GetFiles(folder_path);
-            var file_names_picture = new List<string>();
             var extension_list = new List<string>{".jpg", ".png", ".bmp", ".tif"};
-
-            // テスト用
-            //string file_names_combined = "";
-            //foreach(string str in file_names_all)
-            //{
-            //    // 拡張子比較
-            //    string extension = System.IO.Path.GetExtension(str);
-            //    if (extension_list.Contains(extension))
-            //    {
-            //        file_names_combined += str + "\n";
-            //    }
-            //}
-            //textBlock1.Text = file_names_combined;
 
             // 取得：StackPanelの幅
             var stack_panel_width = stackPanelPicture.ActualWidth;
 
-
             // 取得：すべての画像データのリスト
+            var file_names_picture = new List<Uri>();
             var picture_list = new List<BitmapImage>();
-            foreach (string str in file_names_all)
+            foreach (string uri in file_names_all)
             {
                 // 拡張子比較
-                string extension = System.IO.Path.GetExtension(str);
+                string extension = System.IO.Path.GetExtension(uri);
                 if (extension_list.Contains(extension))
                 {
-                    var image = new BitmapImage(new Uri(str));
-                    picture_list.Add(image);
+                    file_names_picture.Add(new Uri(uri));
                 }
             }
 
@@ -107,24 +92,44 @@ namespace SidePhotoViewer.Views
             var grid_right_widht = gridRight.Width;
 
             // 表示：左ペイン画像
-            imageMain.Source = picture_list[0];
+            var picture_left = new BitmapImage(file_names_picture[0]);
+            picture_left.DecodePixelWidth = (int)grid_left_width;
+            //picture_left.UriSource = file_names_picture[0];
+            imageMain.Source = picture_left;
+
+            // 右ペインの画像を削除する
+            stackPanelPicture.Children.Clear();
+
+            int i = 0;
 
             // 表示：右ペイン画像（動的にImageを作成する）
-            foreach(BitmapImage picture in picture_list)
+            foreach (Uri picture in file_names_picture)
             {
                 // Imageコントロール：サムネイルの表示用
-                var image = new Image();
-                picture.DecodePixelWidth = (int)stack_panel_width;
-                image.Source = picture;
-                image.Width = stack_panel_width;
+                var bitmapimage = new BitmapImage(picture);
+                bitmapimage.DecodePixelWidth = (int)stack_panel_width;
+                //bitmapimage.UriSource = picture;
+                var image_view = new Image();
+                image_view.Source = bitmapimage;
+                string count = picture.ToString();
+                image_view.Name = count;
 
-                stackPanelPicture.Children.Add(image);
-                picture.Dispose();
+
+                stackPanelPicture.Children.Add(image_view);
+                
             }
 
-            picture_list.Dispose();
+            //picture_list.Dispose();
 
         }
 
+        private void stackPanelPicture_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            FrameworkElement fe = e.Source as FrameworkElement;
+            if(fe != null)
+            {
+                textBlock1.Text = fe.Name;
+            }
+        }
     }
 }
