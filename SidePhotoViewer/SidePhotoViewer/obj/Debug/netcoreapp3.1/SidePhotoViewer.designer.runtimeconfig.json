@@ -7,8 +7,7 @@
     },
     "additionalProbingPaths": [
       "C:\\Users\\mnoog\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\mnoog\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "C:\\Users\\mnoog\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

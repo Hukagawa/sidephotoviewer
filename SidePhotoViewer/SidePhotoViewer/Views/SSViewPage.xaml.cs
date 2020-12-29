@@ -13,6 +13,7 @@ namespace SidePhotoViewer.Views
     public partial class SSViewPage : Page, INotifyPropertyChanged
     {
         public HorizontalAlignment Strech { get; private set; }
+        BitmapImage picture_left;
 
         /// <summary>
         /// コンストラクタ
@@ -21,6 +22,8 @@ namespace SidePhotoViewer.Views
         {
             InitializeComponent();
             DataContext = this;
+
+            picture_left = new BitmapImage();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -92,15 +95,13 @@ namespace SidePhotoViewer.Views
             var grid_right_widht = gridRight.Width;
 
             // 表示：左ペイン画像
-            var picture_left = new BitmapImage(file_names_picture[0]);
+            picture_left = new BitmapImage(file_names_picture[0]);
             picture_left.DecodePixelWidth = (int)grid_left_width;
             //picture_left.UriSource = file_names_picture[0];
             imageMain.Source = picture_left;
 
             // 右ペインの画像を削除する
             stackPanelPicture.Children.Clear();
-
-            int i = 0;
 
             // 表示：右ペイン画像（動的にImageを作成する）
             foreach (Uri picture in file_names_picture)
@@ -111,24 +112,24 @@ namespace SidePhotoViewer.Views
                 //bitmapimage.UriSource = picture;
                 var image_view = new Image();
                 image_view.Source = bitmapimage;
-                string count = picture.ToString();
-                image_view.Name = count;
-
+                string uri = picture.ToString();
+                // Nameだと文字列の制限があるためUid
+                image_view.Uid = uri;
 
                 stackPanelPicture.Children.Add(image_view);
                 
             }
-
-            //picture_list.Dispose();
 
         }
 
         private void stackPanelPicture_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             FrameworkElement fe = e.Source as FrameworkElement;
-            if(fe != null)
+            if(fe.Uid != null)
             {
-                textBlock1.Text = fe.Name;
+                textBlock1.Text = fe.Uid;
+                picture_left = new BitmapImage(new Uri(fe.Uid));
+                imageMain.Source = picture_left;
             }
         }
     }

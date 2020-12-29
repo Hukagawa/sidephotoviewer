@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "CElEGQOUAnLBdJcfQQVN+dwhAYyvVFjQsiboQqS8FLviKhXAyZnWGF89e7KRIbPXusQFuXCu2G0Uc6X2WXQJkQ==",
+  "dgSpecHash": "1XMeOsJ0FOQzqimfE7+cTjVSJ2Hi36PX3kH0RutGlgAKf1GhuCawboK+etnJSsmZMDMdwKiO1V5o6aOwi3+ACw==",
   "success": true,
   "projectFilePath": "D:\\Projects\\sidephotoviewer\\SidePhotoViewer\\SidePhotoViewer.Core\\SidePhotoViewer.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\mnoog\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mnoog\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\mnoog\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\mnoog\\.nuget\\packages\\windowsapicodepack-core\\1.1.1\\windowsapicodepack-core.1.1.1.nupkg.sha512",
     "C:\\Users\\mnoog\\.nuget\\packages\\windowsapicodepack-shell\\1.1.1\\windowsapicodepack-shell.1.1.1.nupkg.sha512"

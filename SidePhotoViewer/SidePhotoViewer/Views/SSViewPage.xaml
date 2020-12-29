@@ -47,7 +47,7 @@
                 </Grid.RowDefinitions>
 
                 <ScrollViewer>
-                    <StackPanel x:Name="stackPanelPicture" MouseDown="stackPanelPicture_MouseDown" />
+                    <StackPanel x:Name="stackPanelPicture" MouseDown="stackPanelPicture_MouseDown" Uid="1" />
                 </ScrollViewer>
                 <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,0,0,0" Text="右側" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Row="0"/>
                 <Button x:Name="btnOpenfolder" Content="OpenFolder" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Height="30" Click="btn_openfolder_Click"/>

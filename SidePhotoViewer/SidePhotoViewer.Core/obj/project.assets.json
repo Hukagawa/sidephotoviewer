@@ -268,8 +268,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mnoog\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\mnoog\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -280,9 +279,6 @@
       "packagesPath": "C:\\Users\\mnoog\\.nuget\\packages\\",
       "outputPath": "D:\\Projects\\sidephotoviewer\\SidePhotoViewer\\SidePhotoViewer.Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\mnoog\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -335,7 +331,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
